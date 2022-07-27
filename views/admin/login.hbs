@@ -1,0 +1,19 @@
+<main>
+    <h1>Login</h1>
+    <div class="container">
+        <form class="login" action="/admin/login" method="post">
+            <input type="text" name="usuario" class="username" id="inputUser" placeholder="Usuario">
+            <input type="password" name="password" class="password" id="inputPassword" placeholder="Contraseña">
+            <button type="submit" class="button">Ingresar</button>
+        </form>
+        {{#if error}}
+        <p class="login_error">Usuario o contraseña incorrecta</p>
+        <script>
+            setTimeout(() => {
+                document.getElementsByClassName('login_error')[0].remove();
+            }, 5000)
+        </script>
+        {{/if}}
+    </div>
+
+</main>
